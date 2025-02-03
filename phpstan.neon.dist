@@ -1,0 +1,21 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+    level: 10  # Nível máximo de verificação
+    paths:
+        - app
+        - database
+        - routes
+    scanFiles:
+        - bootstrap/app.php
+        - artisan
+    ignoreErrors:
+        - '#Class .* uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types#'
+        - '#PHPDoc type array<int, string> of property .* is not covariant with PHPDoc type list<string> of overridden property#'
+    checkExplicitMixed: true
+    checkUninitializedProperties: true
+    inferPrivatePropertyTypeFromConstructor: true
+    reportMaybes: true
+    customRulesetUsed: true
