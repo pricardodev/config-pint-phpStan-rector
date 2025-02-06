@@ -11,7 +11,14 @@ parameters:
     scanFiles:
         - bootstrap/app.php
         - artisan
+    checkOctaneCompatibility: true
+    checkModelProperties: true
+    excludePaths:
+        - '**/ide-helper.php'
+        - '**/ide_helper_models.php'
+        - '**/phpstorm.meta.php'
     ignoreErrors:
+        - '#PHPDoc tag @var#'
         - '#Class .* uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types#'
         - '#PHPDoc type array<int, string> of property .* is not covariant with PHPDoc type list<string> of overridden property#'
     checkExplicitMixed: true
@@ -19,3 +26,5 @@ parameters:
     inferPrivatePropertyTypeFromConstructor: true
     reportMaybes: true
     customRulesetUsed: true
+    excludePaths:
+        - ./*/*/FileToBeExcluded.php
