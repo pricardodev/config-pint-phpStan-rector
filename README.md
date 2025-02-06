@@ -74,9 +74,10 @@ O **Laravel Stan** é uma ferramenta de análise estática que detecta problemas
 O **Rector** é uma ferramenta de refatoração automática que aplica padrões consistentes e corrige problemas em seu código, como métodos obsoletos e melhorias de tipagem de parâmetros. Ele também pode ajudar a atualizar seu código para versões mais recentes do PHP ou Laravel.
 
 ### Como Usar
-1. Instale o Rector via Composer:
+1. Instale o Rector via Composer e a pacote especifico para laravel:
    ```bash
    composer require rector/rector --dev
+   composer require rector/rector-laravel --dev
    ```
 
 2. Execute o comando para refatorar o código:
